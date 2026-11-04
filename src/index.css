@@ -1,0 +1,37 @@
+﻿@import "tailwindcss";
+
+@theme {
+  --color-creme: #faf6f0;
+  --color-creme-2: #f1e9dc;
+  --color-terracota: #b4532a;
+  --color-terracota-escuro: #8f3f1d;
+  --color-cimento: #4a4a48;
+  --color-folha: #4f6b3a;
+  --color-mata: #24391b;
+  --color-mata-2: #345027;
+  --color-musgo: #e8eedd;
+  --font-serif: "Caprasimo", Georgia, serif;
+  --font-sans: "Nunito", system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body { margin: 0; background: #faf6f0; color: #4a4a48; font-family: var(--font-sans); overflow-x: hidden; }
+:focus-visible { outline: 3px solid #e0a15a; outline-offset: 3px; border-radius: 8px; }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visivel { opacity: 1; transform: none; }
+
+.folhas {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.07) 0 90px, transparent 91px),
+    radial-gradient(circle at 88% 82%, rgba(255,255,255,.06) 0 140px, transparent 141px),
+    radial-gradient(circle at 70% 8%, rgba(255,255,255,.05) 0 60px, transparent 61px);
+}
+.foto-inclinada { transform: rotate(2deg); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Caprasimo tem um único peso: evita negrito sintético */
+.font-serif, .font-serif * { font-weight: 400 !important; letter-spacing: 0.005em; }
