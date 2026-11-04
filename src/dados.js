@@ -53,7 +53,7 @@ export const VANTAGENS = [
   { titulo: "Preço de fábrica", texto: `Vasos a partir de ${PRECO_INICIAL}, direto de quem fabrica.` },
   { titulo: "Variedade de tamanhos", texto: "Do pequeno ao grande: modelos, formatos e acabamentos para cada espaço." },
   { titulo: "Feito à mão", texto: "Produção artesanal em cimento, com cuidado em cada peça." },
-  { titulo: "Atendimento atacado", texto: "Preço diferenciado para quem compra em quantidade. Combine pelo WhatsApp." },
+  { titulo: "Atendimento atacado", texto: "Preço especial para quem compra em quantidade. Combine pelo WhatsApp." },
 ]
 
 export const PASSOS = [

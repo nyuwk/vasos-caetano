@@ -16,7 +16,7 @@ export default function Localizacao() {
             {[
               ['Endereço', ENDERECO],
               ['Horário', `${HORARIO_DESTAQUE}. ${HORARIO_DETALHE}`],
-              ['Atacado', 'Atendimento atacado, com preço diferenciado.'],
+              ['Atacado', 'Atendimento atacado, com preço especial.'],
             ].map(([rotulo, valor]) => (
               <div key={rotulo} className="relative">
                 <dt className="font-bold">{rotulo}</dt>

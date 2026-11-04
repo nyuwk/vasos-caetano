@@ -10,7 +10,7 @@ export default function Hero() {
     fotos.find((f) => f.endsWith('/hero.jpg')) || fotos.find((f) => !f.includes('/caetano'))
   const itens = [
     { forte: `${NOTA_GOOGLE} ★`, texto: `no Google · ${AVALIACOES} avaliações` },
-    { forte: 'Atendimento atacado', texto: 'preço diferenciado' },
+    { forte: 'Atendimento atacado', texto: 'preço especial' },
     { forte: `A partir de ${PRECO_INICIAL.replace(',00', '')}`, texto: 'preço de fábrica' },
   ]
   return (
