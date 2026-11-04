@@ -1,10 +1,25 @@
+import { useEffect, useState } from 'react'
 import { NAV, NOME } from '../dados'
 import BotaoWhats from './BotaoWhats'
 import Folha from './Folha'
 
 export default function Header() {
+  // No celular, a barra só aparece no topo da página; ao rolar para baixo ela some
+  const [noTopo, setNoTopo] = useState(true)
+
+  useEffect(() => {
+    const atualizar = () => setNoTopo(window.scrollY < 60)
+    atualizar()
+    window.addEventListener('scroll', atualizar, { passive: true })
+    return () => window.removeEventListener('scroll', atualizar)
+  }, [])
+
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-folha/15 bg-creme/90 backdrop-blur">
+    <header
+      className={`fixed inset-x-0 top-0 z-40 border-b border-folha/15 bg-creme/90 backdrop-blur transition-transform duration-500 ease-in-out ${
+        noTopo ? '' : 'max-md:-translate-y-full'
+      }`}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4">
         <a href="#topo" className="flex items-center gap-2 font-serif text-lg font-bold leading-tight text-mata">
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-folha text-white">
