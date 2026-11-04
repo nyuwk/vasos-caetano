@@ -3,11 +3,13 @@ import BotaoWhats from './BotaoWhats'
 import Reveal from './Reveal'
 import Titulo from './Titulo'
 import FloresHover from './FloresHover'
+import FundoDoodles, { DOODLES_ESCURO } from './FundoDoodles'
 
 export default function ComoPedir() {
   return (
-    <section id="como-pedir" className="folhas bg-mata-2 px-4 py-20">
-      <div className="mx-auto max-w-5xl">
+    <section id="como-pedir" className="folhas relative overflow-hidden bg-mata-2 px-4 py-24">
+      <FundoDoodles itens={DOODLES_ESCURO} />
+      <div className="relative mx-auto max-w-5xl">
         <Reveal className="mb-10 text-center">
           <Titulo etiqueta="Como pedir" claro>Simples, em 3 passos</Titulo>
         </Reveal>

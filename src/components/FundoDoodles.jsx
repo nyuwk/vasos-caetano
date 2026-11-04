@@ -5,6 +5,10 @@ const cores = {
   v: 'text-folha/20',
   t: 'text-terracota/20',
   c: 'text-cimento/15',
+  // versões claras, para seções de fundo verde escuro
+  m: 'text-[#c9dca8]/15',
+  o: 'text-[#e0a15a]/15',
+  b: 'text-white/10',
 }
 
 // Desenhos de natureza espalhados no fundo de uma seção.
@@ -56,3 +60,20 @@ export const DOODLES_CTA = [
   ['planta', 'v', 'right-3 bottom-4 h-28 w-24 rotate-3'],
   ['folhas', 'c', 'right-[24%] top-2 h-16 w-16 rotate-45 max-md:hidden'],
 ]
+
+// Troca esquerda/direita para variar o desenho entre seções vizinhas
+const espelhar = (lista) =>
+  lista.map(([t, c, pos]) => [
+    t,
+    c,
+    pos.replace(/left-/g, '§').replace(/right-/g, 'left-').replace(/§/g, 'right-'),
+  ])
+
+const paraEscuro = (lista) =>
+  lista.map(([t, c, pos]) => [t, { v: 'm', t: 'o', c: 'b' }[c] || c, pos])
+
+// Layouts genéricos (funcionam em seções de qualquer altura)
+export const DOODLES_CLARO = DOODLES_LOCALIZACAO
+export const DOODLES_CLARO_ESPELHADO = espelhar(DOODLES_LOCALIZACAO)
+export const DOODLES_ESCURO = paraEscuro(DOODLES_LOCALIZACAO)
+export const DOODLES_ESCURO_ESPELHADO = paraEscuro(espelhar(DOODLES_LOCALIZACAO))

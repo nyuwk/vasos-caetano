@@ -1,9 +1,11 @@
 import { NOME, ENDERECO, INSTAGRAM_LINK, INSTAGRAM_USUARIO } from '../dados'
+import FundoDoodles, { DOODLES_ESCURO_ESPELHADO } from './FundoDoodles'
 
 export default function Footer() {
   return (
-    <footer className="bg-mata px-4 py-10 text-creme">
-      <div className="mx-auto max-w-6xl space-y-2 text-center text-sm">
+    <footer className="relative overflow-hidden bg-mata px-4 py-12 text-creme">
+      <FundoDoodles itens={DOODLES_ESCURO_ESPELHADO} />
+      <div className="relative mx-auto max-w-6xl space-y-2 text-center text-sm">
         <p className="font-serif text-xl font-bold">{NOME}</p>
         <p>{ENDERECO}</p>
         <p>

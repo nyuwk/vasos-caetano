@@ -3,11 +3,13 @@ import Reveal from './Reveal'
 import Titulo from './Titulo'
 import Folha from './Folha'
 import FolhasHover from './FolhasHover'
+import FundoDoodles, { DOODLES_CLARO } from './FundoDoodles'
 
 export default function Vantagens() {
   return (
-    <section id="vantagens" className="px-4 py-20">
-      <div className="mx-auto max-w-6xl">
+    <section id="vantagens" className="relative overflow-hidden px-4 py-24">
+      <FundoDoodles itens={DOODLES_CLARO} />
+      <div className="relative mx-auto max-w-6xl">
         <Reveal className="mb-10 text-center">
           <Titulo etiqueta="Por que comprar aqui">Direto da fábrica para o seu espaço</Titulo>
         </Reveal>

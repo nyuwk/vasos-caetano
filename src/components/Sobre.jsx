@@ -2,7 +2,7 @@ import fotos from 'virtual:fotos'
 import { LEGENDAS, MATERIA_LINK } from '../dados'
 import Reveal from './Reveal'
 import Titulo from './Titulo'
-import { Planta, Flor, Vaso, Folhas } from './Decoracao'
+import FundoDoodles, { DOODLES_CLARO } from './FundoDoodles'
 
 // Moldura: borda branca + sombra verde deslocada; no hover a foto ganha zoom e a moldura "levanta"
 function Moldura({ src, alt, className = '', proporcao }) {
@@ -28,12 +28,7 @@ export default function Sobre() {
   const alt = (f) => LEGENDAS[f.split('/').pop()] || 'Caetano, dono da fábrica de vasos'
   return (
     <section id="sobre" className="relative overflow-hidden px-4 pb-20 pt-52">
-      {/* decoração de fundo */}
-      <Planta className="pointer-events-none absolute left-2 top-44 h-32 w-28 -rotate-6 text-folha/20 md:left-10 md:h-44 md:w-40" />
-      <Flor className="pointer-events-none absolute right-3 top-40 h-28 w-24 rotate-6 text-terracota/20 md:right-12 md:h-40 md:w-36" />
-      <Vaso className="pointer-events-none absolute bottom-10 left-6 h-24 w-24 rotate-6 text-folha/20 md:left-24 md:h-32 md:w-32" />
-      <Folhas className="pointer-events-none absolute bottom-6 right-4 h-28 w-28 text-folha/20 md:right-20 md:h-40 md:w-40" />
-      <Flor className="pointer-events-none absolute bottom-40 left-1/2 hidden h-28 w-24 -rotate-12 text-terracota/15 lg:block" />
+      <FundoDoodles itens={DOODLES_CLARO} />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         <Reveal>

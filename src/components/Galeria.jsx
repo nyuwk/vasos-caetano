@@ -2,6 +2,7 @@ import fotos from 'virtual:fotos'
 import { LEGENDAS, LEGENDA_PADRAO } from '../dados'
 import Reveal from './Reveal'
 import Titulo from './Titulo'
+import FundoDoodles, { DOODLES_CLARO_ESPELHADO } from './FundoDoodles'
 
 const legenda = (src) => LEGENDAS[src.split('/').pop()] || LEGENDA_PADRAO
 
@@ -9,8 +10,9 @@ export default function Galeria() {
   const vasos = fotos.filter((f) => !f.includes('/caetano') && !f.endsWith('/hero.jpg'))
 
   return (
-    <section id="modelos" className="bg-musgo px-4 py-20">
-      <div className="mx-auto max-w-6xl">
+    <section id="modelos" className="relative overflow-hidden bg-musgo px-4 py-24">
+      <FundoDoodles itens={DOODLES_CLARO_ESPELHADO} />
+      <div className="relative mx-auto max-w-6xl">
         <Reveal className="mb-10 text-center">
           <Titulo etiqueta="Modelos">Conheça alguns vasos</Titulo>
         </Reveal>
