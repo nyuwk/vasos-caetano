@@ -53,11 +53,11 @@ export const VANTAGENS = [
   { titulo: "Preço de fábrica", texto: `Vasos a partir de ${PRECO_INICIAL}, direto de quem fabrica.` },
   { titulo: "Variedade de tamanhos", texto: "Do pequeno ao grande: modelos, formatos e acabamentos para cada espaço." },
   { titulo: "Feito à mão", texto: "Produção artesanal em cimento, com cuidado em cada peça." },
-  { titulo: "Entrega", texto: "Fazemos entrega. Combine os detalhes pelo WhatsApp." },
+  { titulo: "Atendimento atacado", texto: "Preço diferenciado para quem compra em quantidade. Combine pelo WhatsApp." },
 ]
 
 export const PASSOS = [
   { titulo: "Chame no WhatsApp", texto: "Mande uma mensagem e conte o que você procura." },
   { titulo: "Escolha modelos e tamanhos", texto: "Veja as opções e escolha os vasos ideais para o seu espaço." },
-  { titulo: "Receba ou retire", texto: "Combine a entrega ou passe na fábrica para retirar." },
+  { titulo: "Retire na fábrica", texto: "Combine o pedido e passe na fábrica para retirar os seus vasos." },
 ]

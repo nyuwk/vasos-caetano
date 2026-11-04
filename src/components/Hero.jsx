@@ -10,7 +10,7 @@ export default function Hero() {
     fotos.find((f) => f.endsWith('/hero.jpg')) || fotos.find((f) => !f.includes('/caetano'))
   const itens = [
     { forte: `${NOTA_GOOGLE} ★`, texto: `no Google · ${AVALIACOES} avaliações` },
-    { forte: 'Entrega', texto: 'na sua casa' },
+    { forte: 'Atendimento atacado', texto: 'preço diferenciado' },
     { forte: `A partir de ${PRECO_INICIAL.replace(',00', '')}`, texto: 'preço de fábrica' },
   ]
   return (
@@ -39,7 +39,7 @@ export default function Hero() {
             Vasos de cimento artesanais, com <span className="text-[#e0a15a]">preço de fábrica</span>.
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-lg text-white">
-            Muitos tamanhos, modelos e acabamentos, feitos à mão pelo Caetano. Escolha os seus e a gente entrega.
+            Muitos tamanhos, modelos e acabamentos, feitos à mão pelo Caetano. Escolha os seus e retire direto na fábrica.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <BotaoWhats />
