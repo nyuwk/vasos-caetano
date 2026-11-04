@@ -13,6 +13,7 @@ export default function Footer() {
           </a>
         </p>
         <p className="pt-4 text-white/80">Projeto acadêmico, página desenvolvida para fins educacionais</p>
+        <p className="text-xs text-white/70">Imagem de destaque ilustrativa, gerada por inteligência artificial.</p>
       </div>
     </footer>
   )
