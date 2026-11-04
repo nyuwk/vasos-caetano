@@ -2,11 +2,13 @@ import { ENDERECO, HORARIO_DESTAQUE, HORARIO_DETALHE, MAPS_LINK, MAPS_EMBED, NOM
 import Reveal from './Reveal'
 import Titulo from './Titulo'
 import FolhasHover from './FolhasHover'
+import FundoDoodles, { DOODLES_LOCALIZACAO } from './FundoDoodles'
 
 export default function Localizacao() {
   return (
-    <section id="onde-estamos" className="px-4 py-20">
-      <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
+    <section id="onde-estamos" className="relative overflow-hidden px-4 py-24">
+      <FundoDoodles itens={DOODLES_LOCALIZACAO} />
+      <div className="relative mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
         <Reveal>
           <Titulo etiqueta="Onde estamos">Venha conhecer a fábrica</Titulo>
           <dl className="group relative mt-6 cursor-default space-y-4 overflow-hidden rounded-3xl bg-musgo p-6 text-mata shadow-md transition-all duration-700 ease-in-out hover:-translate-y-1 hover:bg-folha hover:text-white hover:shadow-lg">
